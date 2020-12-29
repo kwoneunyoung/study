@@ -8,16 +8,44 @@
     <script src=https://unpkg.com/vue-router/dist/vue-router.js></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <div>
+            <router-link to="/login">Login</router-link>
+            <router-link to="/main">Main</router-link>
+        </div>
+        <router-view></router-view>
+    </div>
     <script>
-    var router = new VueRouter({
+        var LoginComponent = {
+            template : '<div>login</div>'
+        }
+        
+        var MainComponet = {
+            template: '<div>main</div>'
+        }
 
-        });
+        var router = new VueRouter({
+            //페이지 라우팅 정보
+            routes :[
+                //로그인 페이지 정보
+                {
+                    //페이지 url이름
+                    path : '/login',
+                    //해당 url에서 표시될 컴포넌트
+                    component: LoginComponent
+                },
+                //메인 페이지 정보
+                {
+                    path : '/main',
+                    component : MainComponet
+                }
+            ]
+            });
 
-        new Vue({
-            el:'#app',
-            router: router
-        });
+            new Vue({
+                el:'#app',
+                router: router
+            });
     </script>
 </body>
 </html>
