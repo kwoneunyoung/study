@@ -1,21 +1,14 @@
-var appHeader = {
-    template : '<div>header</div>',
-    methods : {
-        addNum : function() {
-
-        }
-    }
-}
-
 <template>
+<!--HTML-->
     <div>header</div>
 </template>
 
 <script>
 export default {
+    //JavaScript
     methods : {
         addNum : function() {
-            
+
         }
     }
 
@@ -23,5 +16,5 @@ export default {
 </script>
 
 <style>
-
+    /*css*/
 </style>
