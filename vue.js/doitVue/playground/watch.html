@@ -8,17 +8,27 @@
 </head>
 <body>
     <div id="app">
-        <button v-on:click="logText">click me</button>
-        <input type="text" v-on:keyup.enter="logText">
-        <button>add</button>
+        {{ num }}
+        <button v-on:click="addNum">increase</button>
     </div>
-    
+
     <script>
         new Vue({
             el:'#app',
+            data : {
+                num:10
+            },
+            watch : {
+                num : function(){
+                    this.logText();
+                }
+            },
             methods: {
+                addNum: function(){
+                    this.num = this.num + 1;
+                },
                 logText : function() {
-                    console.log('clicked');
+                    console.log('changed');
                 }
             }
         });
