@@ -9,29 +9,24 @@
 
 <body>
     <script>
-       const colors = ['red', 'blue', 'green'];
-       console.log("Original Array : ", colors);
+      const set = new Set();
+      set.add("kwon1");
+      set.add("kwon2");
+      set.add("kwon3");
 
-       colors.push('yellow');
-       console.log("push('yellow):" , colors);
+      console.log("## Original Set: forEach");
+      set.forEach((value) => console.log(value));
 
-       colors.pop();
-       console.log('pop() : ', colors);
+      console.log("## Origibal Set: for-of");
+      for(let item of set) {
+          console.log(item);
+      }
 
-       colors.reverse();
-       console.log('reverse() : ', colors);
+      set.delete("kwon3");
+      console.log("## After delete kwon3 has:" + set.has('kwon3'));
 
-       colors.sort();
-       console.log('sort() :', colors);
-
-       const splicedcolors = colors.splice(0,2);
-       console.log('splice():', splicedcolors);
-
-       const newColors = colors.join("-");
-       console.log('join():', newColors);
-
-
-
-
+      console.log("##new Array from Set");
+      let arr = Array.from(set);
+      console.log(arr);
     </script>
 </html>
