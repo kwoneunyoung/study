@@ -9,24 +9,7 @@
 
 <body>
     <script>
-      const set = new Set();
-      set.add("kwon1");
-      set.add("kwon2");
-      set.add("kwon3");
+        
 
-      console.log("## Original Set: forEach");
-      set.forEach((value) => console.log(value));
-
-      console.log("## Origibal Set: for-of");
-      for(let item of set) {
-          console.log(item);
-      }
-
-      set.delete("kwon3");
-      console.log("## After delete kwon3 has:" + set.has('kwon3'));
-
-      console.log("##new Array from Set");
-      let arr = Array.from(set);
-      console.log(arr);
     </script>
 </html>
