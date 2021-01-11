@@ -35,6 +35,25 @@
             return currNode;
         }
 
+        //이전 노드 찾기
+        function findPrevious(item) {
+            var currNode = this.head;
+            while(currNode.next != null && currNode.next.element != item) {
+                currNode = currNode.next;
+            }
+            return currNode;
+        }
+
+        //노드추가
+        function append(newElement) {
+            var newNode = newNode(newElement); //새로운 노드 생성
+            var current = this.head; //시작 노드
+            while(current.next != null) { //맨 끝 노드 찾기
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+
     </script>
     
 
