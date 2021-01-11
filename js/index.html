@@ -9,8 +9,31 @@
 
 <body>
     <script>
-      
+        //node를 구현
+        function Node(element) {
+            this.element = element;
+            this.next = null;
+        }
 
+        //LinkedList 구현
+        function LinkedList() {
+            this.head = new Node("head");
+            this.find = find;
+            this.append = append;
+            this.insert = insert;
+            this.remove = remove;
+            this.toString = toString;
+            this.findPrevious = findPrevious;
+        }
+
+        //노드 찾기
+        function find(item) {
+            var currNode = this.head;
+            while(currNode.element != item) {
+                currNode = currNode.next;
+            }
+            return currNode;
+        }
 
     </script>
     
