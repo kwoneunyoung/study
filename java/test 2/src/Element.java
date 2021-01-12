@@ -1,13 +1,19 @@
 public class Element {
 
-  
-   
-    
 
+
+
+    String title;
+   
     Element(String title) {
         this.title = title;
+       
     }
-    String title;
-    Element front = null;
-    Element back = null;
+
+   
+   
+   
+   
+    
+   
 }

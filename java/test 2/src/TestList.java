@@ -1,50 +1,43 @@
 public class TestList {
-    Element head;
-    Element rear;
-    int size=0;
+    private Element head;
+    private Element tail;
+    private int size=0;
 
     private class Element {
-        private Object title;
+        private String title;
         private Element next;
-        public Element(Object input) {
-            this.title = input;
+        public Element(String title) {
+            this.title = title;
             this.next = null;
         }
+
+         
         public String toString() {
             return String.valueOf(this.title);
         }
     }
 
-    public void addFirst(Object input) {
-        Element newElement = new Element(input);
+    public void addFirst(String title) {
+        Element newElement = new Element(title);
         newElement.next = head;
-        head=newElement;
+        head = newElement;
         size++;
-
-        if(head.next == null ) {
-            rear = head;
+        if(head.next ==null ) {
+            tail =head;
         }
     }
-    
-    public void addLast(Object input) {
-        Element newElement = new Element(input);
+
+    public void addLast(String title) {
+        Element newElement = new Element(title);
         if(size == 0) {
-            addFirst(input); 
+            addFirst(title);
         } else {
-            rear.next = newElement;
-            rear = newElement;
+            tail.next = newElement;
+            tail=newElement;
             size++;
         }
     }
 
-
-    void firstElement(String title) {
-        Element newElement = new Element(title);
-        head = newElement;
-        rear = newElement;
-        size++;
-        System.out.println("firstElement(String title) 실행");
-    }
 
     public void addElement(Element element) {
 
