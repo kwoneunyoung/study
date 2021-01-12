@@ -1,4 +1,4 @@
-public class App {
+public class App { //실행하는 메인메소드
     public static void main(String[] args) throws Exception {   
         TestList list = new TestList();     
 
