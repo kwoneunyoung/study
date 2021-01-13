@@ -1,14 +1,14 @@
-public class App { //실행하는 메인메소드
+public class App { //실행하는 메인 메소드
     public static void main(String[] args) throws Exception {   
         TestList list = new TestList(); 
-        list.addFirst("ㅎㅇ");
-        list.addFirst("ㅎ2");
-        list.addFirst("ㅎ3");    
+        list.addFirst("");
+        list.addFirst("");
+        list.addFirst("");    
 
 
-        list.addLast("냥냥");
-        list.addLast("냥냥1");
-        list.addLast("냥냥2");
+        list.addLast("");
+        list.addLast("");
+        list.addLast("");
 
         // Element element1 = new Element("01");
         // Element element2 = new Element("01");
