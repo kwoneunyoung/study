@@ -24,9 +24,7 @@ public class LinkedList {
 		size++;
 		if(head.next == null) { //head에 next가 존재하지 않는다면 마지막 노드는 헤드와같다
 			tail = head;
-		} else {
-			
-		}
+		} 
 	}
 	
 	public void addLast(Object input) {
