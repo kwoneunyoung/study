@@ -44,7 +44,7 @@ public class LinkedList {
 		} 
 		
 		Node temp = head;
-		String str = "[";
+		String str = "["; 
 		
 		while(temp.next != null) {
 			str += temp.data + ", ";
