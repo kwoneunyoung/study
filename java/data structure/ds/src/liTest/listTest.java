@@ -1,11 +1,33 @@
 package liTest;
 
 public class listTest {
-
-	private Node head; //첫번째 노드가 무엇인지에 대한 데이터
-	private Node tail; //제일 끝
-	int size = 0; // 몇 개의 element가 담기는지
-	private class Node {
+	
+	private Node head;
+	private Node tail;
+	private int size = 0;
+	private class Node { //inner class
+		private Object data;
+		private Node next;
+		
+		public Node(Object input) {
+			this.data = input;
+			this.next = null;
+		}
 		
 	}
+	
+	public void firstAdd(Object input) {
+		Node node = new Node(input);
+		node.next = head;
+		head = node;
+		size++;
+		if(head.next == null) {
+			tail = head;
+		}
+	}
+	
+	public void removeNode() {
+		
+	}
+	
 }
