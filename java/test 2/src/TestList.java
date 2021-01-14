@@ -13,10 +13,7 @@ public class TestList {
 		public String toString() {
 			return String.valueOf(this.title);
 		}
-	}
-	
-
-	
+	}	
 	
 	public void addElement(String title) {
     	Element newElement = new Element(title);
@@ -27,8 +24,18 @@ public class TestList {
     		tail = head;
     	} 
     }
-	
+ 
     
+    public String removeElement() { 
+    	Element temp = head;
+    	head = head.next;
+    	String returnData = temp.title;
+    	temp = null;
+    	size--;
+    	return returnData;
+    	
+    }
+
     
     public String toString() {
     	if(head ==null) {
@@ -45,19 +52,6 @@ public class TestList {
     	
     	return str +"]";
     }
-    
-    public String removeElement() { 
-    	Element temp = head;
-    	head = head.next;
-    	String returnData = temp.title;
-    	temp = null;
-    	size--;
-    	return returnData;
-    	
-    }
-
-
-	
 
    
 }
