@@ -35,6 +35,7 @@ public class studyList {
 	 //다음 노드가 없을 때까지 반복문 실행
 	 while(extra.next != null) {//헤드가 null이 아니면
 		 str += extra.data + ", ";// [+ head에 있는 데이터
+
 		 extra = extra.next; //옆에 있는 데이터
 	 }
 	 //마지막 노드를 출력결과에 표시한다
@@ -42,16 +43,10 @@ public class studyList {
 	  return str+"] 이다.";
 	 
  }
- 
- public Object remove(int index) {
-	 Object removed = elementData[index];
-	 for(int i=index+1; i<=size-1; i++) {
-		 elementData[i-1] = elementData[i];
-	 }
-	 size--;
-	 elementData[size] = null;
-	return removed;
- }
+
+	public void remove(int index) {
+		
+	}
 
 	
 }
