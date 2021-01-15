@@ -50,7 +50,7 @@ public class studyList {
 	 }
 	 size--;
 	 elementData[size] = null;
-			 return removed;
+	return removed;
  }
 
 	
