@@ -9,7 +9,8 @@ public class main {
 	list.firstAdd(20);
 	list.firstAdd(10);
 	
-
+	System.out.println(list);
+	
 	}
 	
 	
