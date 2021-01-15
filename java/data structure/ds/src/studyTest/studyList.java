@@ -5,11 +5,12 @@ public class studyList {
  private Node head; //첫번째 노드
  private Node tail; //마지막 노드
  int size = 0; //몇개의 element가 저장 되는지?
+
  
  private class Node { //데이터 저장 및 다음 노드가 무엇인지 정의 하는 게 필수요소
 	private Object data;
 	private Node next;
-
+	
 	 public Node(Object input) {
 		 this.data = input;
 		 this.next = null;
@@ -44,9 +45,13 @@ public class studyList {
 	 
  }
 
-	public void remove(int index) {
-		
-	}
-
+ public Object firstRemove() {
+	 Node extra = head;
+	 head = head.next;
+	 Object delData = extra.data;
+	 extra = null;
+	 size--;
+	 return delData;
+ }
 	
 }
