@@ -7,9 +7,21 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <app-header></app-header>
+        <app-content></app-content>
+    </div>
     
     <script>
+        //전역 컴포넌트 등록
+        Vue.component('app-header', {
+            template : '<h1>Header</h1>'
+        });
+
+        Vue.component('app-content', {
+            template : '<div>Cotent</div>'
+        });
+
         new Vue({
             el:'#app'
         });
