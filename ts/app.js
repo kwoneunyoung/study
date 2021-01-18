@@ -1,8 +1,9 @@
 "use strict";
-var totalCost;
-var orderID;
-var calculateTotalCost = function (price, qty) {
+var sendGreeting = function (message, userName) {
+    if (message === void 0) { message = 'hello'; }
+    if (userName === void 0) { userName = 'there'; }
+    return console.log(message + ", " + userName);
 };
-var findOrderID = function (customer, productId) {
-    return orderID;
-};
+sendGreeting();
+sendGreeting('Good morning');
+sendGreeting('good afternoon', 'nomi');

@@ -1,12 +1,8 @@
-type Str0rNum = number | string;
-let totalCost : number;
-let orderID: Str0rNum;
+const sendGreeting = (message='hello', userName='there'):void => 
+    console.log(`${message}, ${userName}`);
+    
 
-const calculateTotalCost= (price:number | string, qty:number):void => {
 
-};
-
-const findOrderID = (customer:{customerID:number|string, name:string}, 
-    productId:number|string):number|string => {
-        return orderID;
-    }
+sendGreeting();
+sendGreeting('Good morning');
+sendGreeting('good afternoon', 'nomi');
