@@ -13,14 +13,35 @@
 // }
 // logText<string>('하이');
 
-function logText(text:string) {
+// function logText(text:string) {
+//     console.log(text);
+//     return text;
+// }
+
+// function logNum(num:number) {
+//     console.log(num);
+//     return num;
+// }
+
+
+// function logText(text:string | number) {
+//     console.log(text);
+//     return text;
+// }
+
+// const a = logText('a');
+// logText(10);
+
+function logText<T>(text:T):T {
     console.log(text);
     return text;
 }
 
-function logNum(num:number) {
-    console.log(num);
-    return num;
-}
-logText('a');
-logNum(10);
+const strr = logText<string>('abc');
+strr.split('')
+const login = logText<boolean>(true);
+// logText('a');
+// logText(10); 
+
+
+
