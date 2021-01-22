@@ -43,5 +43,31 @@ const login = logText<boolean>(true);
 // logText('a');
 // logText(10); 
 
+//인터페이스에 제니릭을 선언하는 방법
+// interface Dropdown {
+//     value : string;
+//     selected : boolean;
+// }
 
+// const ob : Dropdown = {
+//     value : 'abc',
+//     selected : false
+// };
 
+interface Dropdown<T> {
+    value : T;
+    selected : boolean;
+    } 
+const ob:Dropdown<string> = {value : 'abc', selected : false};
+
+//제네릭의 타입 제한
+function logTextLength<T>(text: T[]):T[] {
+    console.log(text.length);
+    text.forEach(function(text){
+        console.log(text);
+        
+    })
+    return text;
+}
+
+logTextLength<string>(['hi','fufu']);
