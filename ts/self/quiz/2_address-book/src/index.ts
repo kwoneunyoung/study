@@ -93,18 +93,25 @@ class AddressBook {
 
   
 
-  addContact(contact) {
+  addContact(contact:Contact):void {
     this.contacts.push(contact);
   }
 
-  displayListByName() {
+  displayListByName():string[] {
     return this.contacts.map(contact => contact.name);
   }
 
-  displayListByAddress() {
+  displayListByAddress():string[] {
     return this.contacts.map(contact => contact.address);
   }
   /* ------------------------------------------------ */
 }
 
+let heros = [
+  {name : 'Tony', age:30},
+  {name : 'Captain', age:100},
+];
+heros.map(function(hero){
+  return hero.name;
+});
 new AddressBook();
