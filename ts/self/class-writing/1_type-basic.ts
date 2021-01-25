@@ -11,3 +11,24 @@ let num : number = 10;
 let arr: Array<number> = [1,2,3];
 let herose : Array<string> = ['Capt', 'Thor', 'Hulk'];
 let items: number[] = [1,2,3];
+
+//TS 튜플 : 순서의 타입까지 정하는 것
+let address: [string, number] = ['hadan',10];
+
+//TS 객체
+let obj: object = {};
+// let person: object = {
+//     name : 'capt',
+//     age : 100
+// };
+
+let person: {
+    name : string,
+    age: number;
+} = {
+   name : 'thor',
+   age:1000 
+}
+
+//TS 진위값
+let show:boolean = true;
