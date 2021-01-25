@@ -24,3 +24,14 @@ if ((nom as Developer).skill) {
     console.log(age);
     
 }
+
+//타입 가드 정의
+function isDeveloper(target: Developer | job):target is Developer {
+    return (target as Developer).skill !== undefined;
+}
+if(isDeveloper(nom)) {
+    console.log(nom.skill);
+} else {
+    console.log(nom.age);
+    
+}
