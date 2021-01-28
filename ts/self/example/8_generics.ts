@@ -51,3 +51,36 @@ function getAllowedOptions<T extends keyof ShoppingItems>(option: T): T {
 getAllowedOptions('nothing');
 // const a = getAllowedOptions('name');
 // a.toUpperCase(); // Name
+
+//제네릭 타입제한
+// function logTextLength<T>(text:T[]):T[] {
+//   console.log(text.length);
+//   text.forEach(function(text){
+//     console.log(text);
+    
+//   })
+//   return text;
+// }
+// logTextLength(['hi','fufu']);
+
+// 재네릭 타입 제한2 - 정의된 타입 이용하기
+interface LengthType {
+  length:number;
+
+}
+function logTextLenght<T extends LengthType>(text:T):T {
+  return text;
+}
+logTextLenght('a');
+
+//제네릭 타입제한 3 -keyof
+interface ShoppingItem {
+  name : string;
+  price: number;
+  stock:number;
+}
+
+function getShoppingItemOption<T extends keyof ShoppingItem>(itemOption :T):T {
+  return itemOption;
+}
+getShoppingItemOption('name');
