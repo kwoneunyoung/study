@@ -34,7 +34,7 @@
     "tests/**/*.ts",
     "tests/**/*.tsx"
   ],
-  "exclude": [
+  "exclude": [ //빌드를 예외할 파일
     "node_modules"
   ]
 }
