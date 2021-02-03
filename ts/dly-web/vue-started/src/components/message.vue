@@ -5,9 +5,8 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-
     @Component
     export default class Message extends Vue {
         message: string = '메세지를 입력해주세요';
