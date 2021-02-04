@@ -1,16 +1,18 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <message></message>
+    <children parentMessage="hello world"></children>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import message from '@/components/message.vue';
-@Options({
+import { Component, Vue } from 'vue-property-decorator';
+import Children from '@/components/children.vue';
+
+
+@Component({
   components: {
-    message,
+    Children,
   },
 })
 export default class Home extends Vue {}
