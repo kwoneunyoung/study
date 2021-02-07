@@ -2,6 +2,7 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     <children :parentMessage ="message"></children>
+    <button @click="changeMessage">메세지를 바꿔볼게요</button>
   </div>
 </template>
 
@@ -16,5 +17,9 @@ import children from '@/components/children.vue';
 })
 export default class Home extends Vue {
   message:string ='hello world';  
+
+  changeMessage() {
+    this.message = 'change';
+  }
 }
 </script>
