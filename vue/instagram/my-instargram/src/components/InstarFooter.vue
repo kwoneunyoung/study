@@ -1,6 +1,6 @@
-<templte>
+<template>
     <div>footer</div>
-</templte>
+</template>
 
 <script>
 export default {

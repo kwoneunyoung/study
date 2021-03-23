@@ -1,6 +1,6 @@
-<templte>
+<template>
     <div>content</div>
-</templte>
+</template>
 
 <script>
 export default {
