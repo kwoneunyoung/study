@@ -1,11 +1,11 @@
 <template>
    <section>
        <ul>
-        <li v-for="todoItem in todoItems" v-bind:key="todoItem" class="shadow">
+        <li v-for="(todoItem,index) in todoItems" v-bind:key="todoItem" class="shadow">
         <i class="checkBtn fa fa-check" aria-hidden="true"></i>
         {{ todoItem }}
         <span class="removeBtn" type="button" @click="removeTodo(todoItem, index)">
-        
+        <span class="removeBtn" type="button" @click="removeTodo"></span>
             <i class="fa fa-trash-o" aria-hidden="true"></i>
         </span>
         </li>
@@ -22,7 +22,7 @@
         },
         methods: {
             removeTodo() {
-                cosole.log('clicked');
+                console.log('clicked');
             }
         },
         created() {
