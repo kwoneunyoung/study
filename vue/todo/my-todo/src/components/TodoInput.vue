@@ -1,5 +1,5 @@
 <template>
-    <div class="inputbox shadow">
+    <div class="inputBox shadow">
         <input type="text" v-model="newTodoItem" 
         placeholder="Type what you have to do"
         v-on:keyup.enter="addTodo">
@@ -48,7 +48,7 @@
         font-size:0.9rem;        
     }
     .addContainer {
-        float:right;
+        float: right;
         background: linear-gradient(to right, #6478FB, #8763FB);
         display: inline-block;
         width:3rem;
