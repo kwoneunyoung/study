@@ -2,8 +2,8 @@
   <div id="app">
     <TodoHeader></TodoHeader>
     <TodoInput v-on:addTodo="addTodo"></TodoInput>
-    <TodoList v-bind:propsdata="todoItems"></TodoList>
-    <TodoFooter></TodoFooter>
+    <TodoList v-bind:propsdata="todoItems" @removeTodo="removeTodo"></TodoList>
+    <TodoFooter v-on:removeAll="clearAll"></TodoFooter>
   </div>
 </template>
 
@@ -23,12 +23,20 @@
             }
         },
     methods : {
+      clearAll() {
+        localStorage.clear();
+        this.todoItems=[];
+      },
       addTodo(todoItem) { //로컬 스토리지에 데이터를 추각하는 로직
         localStorage.setItem(todoItem, todoItem);
         this.todoItems.push(todoItem);
-
+      },
+      removeTodo(todoItem, index) {
+        localStorage.removeItem(todoItem);
+        this.todoItems.splice(index,1);
       }
     },
+      
     components: {
       'TodoHeader': TodoHeader,
       'TodoInput' : TodoInput,
