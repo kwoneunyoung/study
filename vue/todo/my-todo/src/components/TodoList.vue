@@ -5,7 +5,7 @@
         <i class="checkBtn fa fa-check" aria-hidden="true"></i>
         {{ todoItem }}
         <span class="removeBtn" type="button" @click="removeTodo(todoItem, index)">
-        <span class="removeBtn" type="button" @click="removeTodo"></span>
+        
             <i class="fa fa-trash-o" aria-hidden="true"></i>
         </span>
         </li>
@@ -21,8 +21,9 @@
             }
         },
         methods: {
-            removeTodo() {
-                console.log('clicked');
+            removeTodo(todoItem,index) {
+                localStorage.removeItem(todoItem);
+                this.todoItems.splice(index,1);
             }
         },
         created() {
