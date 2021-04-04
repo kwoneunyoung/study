@@ -14,20 +14,15 @@
 
 <script>
     export default {
- 
-
-        methods : {
             props: [
                 'propsdata'
-            ]
-        },            
-            removeTodo(todoItem, index) {
-                localStorage.removeItem(todoItem);
-                this.todoItems.splice(index,1);
-            }
+            ],
+            methods : { 
+                removeTodo(todoItem, index) {
+                    this.$emit('removeTodo', todoItem, index);
+                }
+                     }
         }
-
-    }
 </script>
 
 <style>
