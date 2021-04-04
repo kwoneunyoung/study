@@ -3,10 +3,12 @@
         <ul>
             <li v-for="todoItem in todoItems" v-bind:key="todoItem" class="shadow">
                 <i class="checkBtn fa fa-check" aria-hidden="true"></i>
-                {{todoItem}}</li>
+                {{todoItem}}
             <span class="removeBtn" type="button" @click="removeTodo(todoItem,index)">
+            <span class="removeBtn" type="button" @click="removeTodo"></span>
                 <i class="fa fa-trash-o" aria-hidden="true"></i>
             </span>
+           </li> 
         </ul>
     </section>
 </template>
@@ -23,6 +25,12 @@
                 for(var i=0; i<localStorage.length; i++) {
                     this.todoItems.push(localStorage.key(i));
                 }
+            }
+        },
+        methods : {
+            
+            removeTodo() {
+                console.log('클릭햇움');
             }
         }
 
