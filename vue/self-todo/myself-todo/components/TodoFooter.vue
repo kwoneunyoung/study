@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <h3>TodoList!</h3>
-    </div>
+    <div>footer</div>
 </template>
 
 <script>
