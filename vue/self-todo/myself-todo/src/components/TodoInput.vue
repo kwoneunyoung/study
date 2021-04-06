@@ -1,5 +1,5 @@
 <template>
-    <div>list</div>
+    <div>input</div>
 </template>
 
 <script>
