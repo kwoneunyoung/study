@@ -1,7 +1,7 @@
 <template>
     <section>
         <ul>
-            <li></li>
+            <li v-for="todoItem in todoItems" v-bind:key="todoItem">{{todoItem}}</li>
             <li></li>
             <li></li>
         </ul>
