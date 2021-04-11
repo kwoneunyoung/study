@@ -9,7 +9,7 @@
     export default {
         methods: {
             clearTodo() {
-                localStorage.clear();
+                this.$emit('removeAll');
             }
         }
 
@@ -29,7 +29,7 @@
     .clearAllBtn {
         color: #e20303;
         display: black;
-    }
+        cursor: pointer;    }
 </style>
 
 

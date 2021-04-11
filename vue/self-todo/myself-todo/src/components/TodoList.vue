@@ -20,8 +20,7 @@
        
         methods: {
             removeTodo(todoItem, index) {
-                localStorage.removeItem(todoItem);
-                this.todoItems.splice(index,1);
+                this.$emit('removeTodo', todoItem, index);
                 
             }
         }
