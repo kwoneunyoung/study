@@ -18,9 +18,9 @@
         methods : {
             addTodo() {
                 if(this.newTodoItems !== "") {
-                    var values = this.newTodoItems && this.newTodoItems.trim();
-                    localStorage.setItem(values,values);
-                    this.newTodoItems='';
+                    var value = this.newTodoItems && this.newTodoItems.trim();
+                    this.$emit('addTodo', value);
+                    this.clearInput();
                }
                else {
                    alert('입력을 하라궁ㅇㅅㅇ');
