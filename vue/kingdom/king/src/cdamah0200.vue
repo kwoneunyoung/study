@@ -56,3 +56,102 @@
         </div>
     </div>
 </template>
+
+<script lang="ts">
+//import Base from "@/core/SHLBase.vue"
+//import Header from "@/biz/components/header.vue"
+
+    export default {
+        mixins : [Base],
+        components : {
+                Header
+        },
+        data() {
+            return {
+                headeInfo : {},
+                currentState : false,
+                currentInsurenceState : false,
+                currentEventState : false
+            }
+        },
+        mounted() {
+            console.log("---mounted---")
+        },
+        computed : {
+            isActive() {
+                return this.currentState
+            },
+            isInsurenceActive() {
+                return this.currentInsurenceState
+            },
+            isEventActive() {
+                return this.currentEventState
+            },
+            checkedRegistValue() {
+                get() {
+                    return this.currentState
+                },
+                set(newValue:boolean){
+                    if(newValue) {
+                        this.toastAllow()
+                    }
+                    else {
+                        this.toastReject()
+                    }
+                }
+                this.currentState = newValue
+            }
+        },
+        checkedInsurenceValue() {
+            get() {
+                return this.currentEventState
+            },
+            set(newValue:boolean) {
+                if(newValue) {
+                    this.toastAllow()
+                }
+                else{
+                    this.toastReject()
+                }
+                this.currentEventState = newValue
+            }
+        }
+    },
+    methods : {
+        vueCreated(parameters:any) {
+            console.log("cdamaj0300p01 => ", JSON.stringify(parameters))
+            this.headInfo.title="설정"
+            this.headInfo.navigationBarStyle ="pop"
+            this.headInfo.showBackPressButton = true
+            this.headInfo.showFinishButton = true
+        },
+        vueResult(results:any) {
+
+        },
+        toastAllow() {
+            const toast:any = document.getElementById('toast')
+            let isToastShown:boolean = false
+            if(isToastShown) return
+            isToastShown = true;
+            toast.classList.add('show')
+            setTimeout(function() {
+                //2700ms 후에 show 클래스를 제거함
+                toast.classList.remove('show')
+                isToastShown = false
+            }, 2700)
+        },
+        toastReject() {
+            const toastReject:any = document.getElementById('toastReject')
+            let isToastShown:boolean = false
+            if(isToastShown) return;
+            isToastShown = true
+            toastReject.classList.add('show')
+            setTimeout(function(){
+                toastReject.classList.remove('show')
+                isToastShown=false
+            }, 2700)
+        }
+
+    }
+
+</script>
